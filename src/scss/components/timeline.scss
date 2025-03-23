@@ -1,0 +1,99 @@
+/* Overall Timeline Styles */
+.timeline {
+    position: relative;
+    padding-left: 60px; /* Added padding for better spacing */
+    margin-top: 30px;
+  }
+  
+  /* Add vertical line */
+  .timeline:before {
+    content: '';
+    position: absolute;
+    left: 68px; /* Adjust to place the line at the center of the dots */
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #000000; /* Line color */
+  }
+  
+  /* Timeline Item */
+  .timeline-item {
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 30px;
+  }
+  
+  .timeline-item-header {
+    display: flex;
+    align-items: center;
+    padding: 0px 0;
+  }
+  
+  .timeline-header-content {
+    display: flex;
+    align-items: center;
+    gap: 0px; /* Space between arrow, dot, and date */
+  }
+  /* Timeline Dot */
+  .timeline-dot {
+    position: absolute;
+    left: 0; /* Align the dot with the center of the line */
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #000000;
+    border-radius: 50%;
+    z-index: 2; /* Ensure it stays on top of the line */
+  }
+  
+  /* Arrow Button */
+  .timeline-arrow {
+    position: absolute;
+    left: -25px; /* Adjust to place the arrow before the timeline line */
+    top: 5%;
+    transform: scale(2);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Remove focus and active border */
+  .timeline-arrow:focus,
+  .timeline-arrow:active {
+    outline: none;  /* Removes the outline on focus */
+    border: none;   /* Ensures no border is visible */
+  }
+
+  /* Rotate arrow when expanded */
+  .timeline-arrow[aria-expanded="true"] svg {
+    transform: rotate(180deg);
+  }
+  
+  /* Timeline Item Body */
+  .timeline-item-body {
+    display: none;
+    padding: 15px; /* Added padding for better content spacing */
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  /* Timeline Item Body visible when expanded */
+  .timeline-item-body[aria-hidden="false"] {
+    display: block;
+  }
+  
+  /* Timeline Date & Title */
+  .timeline-meta {
+    display: flex;
+    flex-direction: column; /* Stacks date above title */
+    line-height: 1.4;
+  }
+  
+  /* Rotate Arrow on Expand */
+  .timeline-arrow[aria-expanded="true"] + .timeline-item-body {
+    display: block;
+  }
+  
