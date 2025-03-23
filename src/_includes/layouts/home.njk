@@ -1,0 +1,37 @@
+{% extends 'layouts/base.njk' %}
+
+{# Intro content #}
+{% set introHeading = title %}
+{% set introSummary %}
+  {{ content | safe }}
+{% endset %}
+
+{# Timeline content #}
+{% set timelineHeading = "Career Journey" %}
+{% set timelineItems = collections.timeline %}
+
+{# Post list content #}
+{% set postListHeading = postsHeading %}
+{% set postListItems = collections.postFeed %}
+
+{# Publication list content #}
+{% set postListHeading = postsHeading %}
+{% set publicationListItems = collections.publicationFeed %}
+
+{# Archive link #}
+{% if postListItems.length < collections.posts.length %} 
+  {% set paginationNextText = archiveButtonText %}
+  {% set paginationNextUrl = '/archive' %}
+{% endif %}
+
+{% block content %}
+  <main id="main-content" tabindex="-1">
+    {% include "partials/components/intro.njk" %}
+    
+    {# Include the timeline before the posts #}
+    {% include "partials/components/timeline.njk"%}
+
+    {% include "partials/components/publications.njk" %}
+    {% include "partials/components/pagination.njk" %}
+  </main>
+{% endblock %}
