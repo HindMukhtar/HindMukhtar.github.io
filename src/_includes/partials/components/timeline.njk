@@ -22,14 +22,14 @@
 
           <span class="timeline-dot"></span>
           <span id="item{{ loop.index }}-name" class="timeline-meta">
-            <time class="timeline-date" datetime="{{ item.date | w3DateFilter }}">{{ item.date | dateFilter }}</time><br>
+            <time class="timeline-date" datetime="{{ item.date | myDateFilter }}">{{ item.date | myDateFilterds }}</time><br>
             <strong class="timeline-title">{{ item.data.title }}</strong>
           </span>
         </div>
 
         <div class="timeline-item-body" id="item{{ loop.index }}-body" role="region" aria-labelledby="item{{ loop.index }}" aria-hidden="true">
           <div class="timeline-item-body-content">
-            {{ item.data.content | safe }}
+            {{ item.content | safe }}
           </div>
         </div>
       </div>
