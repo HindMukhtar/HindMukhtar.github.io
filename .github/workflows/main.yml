@@ -26,5 +26,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages    # Name of the branch to deploy to
-          folder: _site       # Folder containing the built site
+          branch: main  # Deploy to the main branch
+          folder: ./  # Deploy files from the root of the repository
+          target_folder: "/"  # Deploy files to the root of GitHub Pages
