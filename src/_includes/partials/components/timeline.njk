@@ -29,7 +29,7 @@
 
         <div class="timeline-item-body" id="item{{ loop.index }}-body" role="region" aria-labelledby="item{{ loop.index }}" aria-hidden="true">
           <div class="timeline-item-body-content">
-            {{ item.content | safe }}
+            {{ item.data.content | safe }}
           </div>
         </div>
       </div>

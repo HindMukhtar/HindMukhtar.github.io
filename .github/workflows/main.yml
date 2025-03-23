@@ -30,4 +30,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages  # Deploy to the main branch
-          folder: .  # Deploy files from the root of the repository
+          folder: dist  # Deploy files from the root of the repository
