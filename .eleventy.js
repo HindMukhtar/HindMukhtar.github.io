@@ -99,6 +99,7 @@ module.exports = function(config) {
       input: 'src',
       output: 'dist'
     },
-    passthroughFileCopy: true
+    passthroughFileCopy: true, 
+    pathPrefix: '/'  // Set the prefix to '/' for GitHub Pages
   };
 };
