@@ -1,9 +1,0 @@
----
-title: "Air Traffic and Usage Predictions in Avionic Communications using Attention Based VAEGAN Model"
-date: 2024-05-05
-conference: "International Conference on Machine Learning for Communication and Networking (ICMLCN)"
-authors: "Hind Mukhtar, Raymound Schaub, Melike Erol-Kantarci"
-tags: publications
-url: "https://ieeexplore.ieee.org/abstract/document/10625144"
----
-The need for uninterrupted connection is an enabler for enhanced connectivity in aircrafts. Satellite based communication in aircrafts exhibits high latency and can have limited data rates. Furthermore, the increasing demand for air travel can strain the capacity of satellite communication systems, necessitating the development of more robust traffic prediction methods. This necessity is particularly pronounced in the realm of business aviation, given the irregular traffic patterns compared to scheduled commercial flights. In this paper, we present an attention-based VAEGAN model designed to forecast the number of active tails within satellite beams. We extend the capabilities of our proposed model to predict the volume of upstream and downstream usage within these satellite beams. To validate our model, we employ real avionics data collected from the two most heavily traversed flight routes. Finally, we perform a comparative analysis, benchmarking the performance of existing machine learning-based techniques with our proposed model. The findings indicate that the proposed VAEGAN model exhibits superior performance in forecasting irregularities in the timeseries pattern, specifically in forecasting unusual highs or lows in the number of aircrafts within the satellite beam, outperforming alternative models.
