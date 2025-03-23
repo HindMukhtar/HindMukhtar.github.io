@@ -1,0 +1,30 @@
+name: Build and Deploy Eleventy Site
+
+on:
+  push:
+    branches:
+      - main  # or the branch you are working from
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'  # or whichever version you're using
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build site with Eleventy
+        run: npx eleventy
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages    # Name of the branch to deploy to
+          folder: _site       # Folder containing the built site
