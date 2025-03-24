@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: '14'  # or whichever version you're using
 
@@ -31,4 +31,3 @@ jobs:
         with:
           branch: gh-pages  # Deploy to the main branch
           folder: dist  # Deploy files from the root of the repository
-          target_folder: _site 
