@@ -40,6 +40,8 @@ module.exports = function(config) {
   config.addPassthroughCopy('node_modules/nunjucks/browser/nunjucks-slim.js');
   config.addPassthroughCopy('src/robots.txt');
   config.addPassthroughCopy('src/_includes/assets/css')
+  config.addPassthroughCopy('package.json')
+  config.addPassthroughCopy('package-lock.json')
 
   const now = new Date();
 
