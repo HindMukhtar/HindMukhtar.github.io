@@ -1,6 +1,6 @@
 ---
 title: 'About Me'
-layout: 'layouts/post.njk'
+layout: 'layouts/page.njk'
 ---
 ![](/images/IMG_2437.jpg)
 
