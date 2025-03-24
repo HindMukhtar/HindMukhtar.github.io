@@ -6,6 +6,11 @@
       "external": false
     },
     {
+      "text": "About Me",
+      "url": "/pages/aboutme",
+      "external": false
+    },
+    {
       "text": "Google Scholar",
       "url": "https://scholar.google.ca/citations?view_op=list_works&hl=en&hl=en&user=8dFO4tsAAAAJ",
       "external": true
@@ -16,8 +21,8 @@
       "external": true
     }, 
     {
-      "text": "About Me",
-      "url": "/pages/aboutme",
+      "text": "Resume",
+      "url": "/images/HindMukhtar-Resume.pdf",
       "external": false
     }
   ]
