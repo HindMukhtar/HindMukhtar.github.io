@@ -31,3 +31,4 @@ jobs:
         with:
           branch: gh-pages  # Deploy to the main branch
           folder: dist  # Deploy files from the root of the repository
+          target_folder: _site 
