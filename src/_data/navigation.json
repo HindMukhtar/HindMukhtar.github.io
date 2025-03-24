@@ -17,8 +17,8 @@
     }, 
     {
       "text": "About Me",
-      "url": "/aboutme",
-      "external": true
+      "url": "/pages/aboutme",
+      "external": false
     }
   ]
 }

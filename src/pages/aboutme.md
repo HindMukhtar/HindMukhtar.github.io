@@ -1,6 +1,6 @@
 ---
 title: 'About Me'
-layout: 'layouts/page.njk'
+layout: 'layouts/post.njk'
 ---
 
 Hi, I'm Hind, a passionate data scientist with a focus on AI-enabled wireless communications. I'm currently in the final year of my PhD, where my research explores the intersection of AI, communication systems, and the aviation industry. Specifically, I’m working on optimizing avionic communication networks with machine learning techniques like reinforcement learning, generative AI, and deep neural networks.
