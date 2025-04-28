@@ -71,7 +71,35 @@ module.exports = function(config) {
   config.addCollection('publicationFeed', collection => {
     return [...collection.getFilteredByGlob('./src/publications/*.md')]
       .reverse()
-      .slice(0, site.maxPostsPerPage);
+      .slice(0, site.maxPublicationsPerPage);
+  });
+
+  // Blogs collection 
+
+  config.addCollection('blogs', collection => {
+    return [
+      ...collection.getFilteredByGlob('./src/blogs/*.md')
+    ].reverse();
+  });
+
+  config.addCollection('blogsFeed', collection => {
+    return [...collection.getFilteredByGlob('./src/blogs/*.md')]
+      .reverse()
+      .slice(0, site.maxBlogsPerPage);
+  });
+
+  // Blogs collection 
+
+  config.addCollection('community', collection => {
+    return [
+      ...collection.getFilteredByGlob('./src/community/*.md')
+    ].reverse();
+  });
+
+  config.addCollection('communityFeed', collection => {
+    return [...collection.getFilteredByGlob('./src/community/*.md')]
+      .reverse()
+      .slice(0, site.maxBlogsPerPage);
   });
   
   // Timeline collection

@@ -1,0 +1,21 @@
+{% extends 'layouts/base.njk' %}
+
+{# Intro content #}
+{% set introHeading = title %}
+{% set introSummary %}
+  {{ content | safe }}
+{% endset %}
+
+
+{# Community list content #}
+{% set communituListHeading = "Commmunity Outreach & Events" %}
+{% set communityListItems = collections.communityFeed %}
+
+{% block content %}
+  <main id="main-content" tabindex="-1">
+    {% include "partials/components/intro.njk" %}
+    
+    {% include "partials/components/community.njk" %}
+  </main>
+{% endblock %}
+

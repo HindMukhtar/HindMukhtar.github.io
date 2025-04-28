@@ -1,5 +1,5 @@
 ---
-title: "Bachelors of Electrical Engineering at QueensU"
+title: "Started Bachelors of Electrical Engineering at QueensU"
 date: 2014-09-01
 url: "/timeline/event-2"
 tags: timeline

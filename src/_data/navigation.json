@@ -11,23 +11,8 @@
       "external": false
     },
     {
-      "text": "Google Scholar",
-      "url": "https://scholar.google.ca/citations?view_op=list_works&hl=en&hl=en&user=8dFO4tsAAAAJ",
-      "external": true
-    },
-    {
-      "text": "LinkedIn",
-      "url": "https://www.linkedin.com/in/hind-mukhtar/",
-      "external": true
-    }, 
-    {
-      "text": "Resume",
-      "url": "/images/HindMukhtar-Resume.pdf",
-      "external": false
-    },
-    {
-      "text": "CV",
-      "url": "/images/HindMukhtar-CV.pdf",
+      "text": "Community Involvement",
+      "url": "/pages/community",
       "external": false
     }
   ]

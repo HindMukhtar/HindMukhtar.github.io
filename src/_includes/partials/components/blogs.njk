@@ -1,0 +1,25 @@
+{% if blogListItems.length %}
+<section class="[ blog-list ] [ pad-top-700 gap-bottom-900 ]">
+  <div class="[ inner-wrapper ] [ sf-flow ]">
+    <h2 class="[ blog-list__heading ] [ text-700 md:text-800 ]">
+      {{ blogListHeading }}
+    </h2>
+    <ol class="[ blog-list__items ] [ sf-flow pad-top-300 ]" reversed>
+      {% for item in blogListItems %}
+        {% if item.date.getTime() <= global.now %}
+          <li class="blog-list__item">
+            <h3 class="font-base leading-tight text-600 weight-mid">
+              <a href="{{ item.data.url }}" class="blog-list__link" rel="bookmark" target="_blank">
+                {{ item.data.title }}
+              </a>
+            </h3>
+            <p class="text-500 gap-top-300 weight-mid">
+              <time datetime="{{ item.date | w3DateFilter }}">{{ item.date | dateFilter }}</time>
+            </p>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+{% endif %}

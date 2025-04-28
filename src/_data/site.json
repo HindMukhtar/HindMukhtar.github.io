@@ -8,6 +8,8 @@
   "authorName": "Hind Mukhtar",
   "enableThirdPartyComments": false,
   "maxPostsPerPage": 5,
+  "maxPublicationsPerPage": 5, 
+  "maxBlogsPerPage": 5, 
   "paymentPointer": "",
   "faviconPath": "/images/favicon.png"
 }

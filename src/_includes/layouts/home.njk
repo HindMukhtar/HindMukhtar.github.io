@@ -18,6 +18,10 @@
 {% set postListHeading = postsHeading %}
 {% set publicationListItems = collections.publicationFeed %}
 
+{# Blog list content #}
+{% set blogListHeading = "Blogs" %}
+{% set blogListItems = collections.blogsFeed %}
+
 {# Archive link #}
 {% if postListItems.length < collections.posts.length %} 
   {% set paginationNextText = archiveButtonText %}
@@ -32,6 +36,9 @@
     {% include "partials/components/timeline.njk"%}
 
     {% include "partials/components/publications.njk" %}
+
+    {% include "partials/components/blogs.njk" %}
+
     {% include "partials/components/pagination.njk" %}
   </main>
 {% endblock %}

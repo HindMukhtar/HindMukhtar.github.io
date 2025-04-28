@@ -1,5 +1,5 @@
 ---
-title: "PhD at University of Ottawa"
+title: "Started PhD at University of Ottawa"
 date: 2021-09-01
 url: "/timeline/event-2"
 tags: timeline
