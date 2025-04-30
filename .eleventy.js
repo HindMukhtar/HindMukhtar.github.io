@@ -110,6 +110,11 @@ module.exports = function(config) {
       .sort((a, b) => new Date(b.data.date) - new Date(a.data.date)); // Sort by date descending
   });
 
+  // Skills collection 
+  config.addCollection('skills', collectionApi => {
+    return collectionApi.getFilteredByGlob('./src/Skills/*.md');
+  });
+
   // Plugins
   config.addPlugin(rssPlugin);
   config.addPlugin(syntaxHighlight);

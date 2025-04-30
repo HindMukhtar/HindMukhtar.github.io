@@ -22,6 +22,10 @@
 {% set blogListHeading = "Blogs" %}
 {% set blogListItems = collections.blogsFeed %}
 
+{# skills list content #}
+{% set skillsListHeading = "Skills" %}
+
+
 {# Archive link #}
 {% if postListItems.length < collections.posts.length %} 
   {% set paginationNextText = archiveButtonText %}
@@ -32,6 +36,8 @@
   <main id="main-content" tabindex="-1">
     {% include "partials/components/intro.njk" %}
     
+    {% include "partials/components/skills.njk"%}
+
     {# Include the timeline before the posts #}
     {% include "partials/components/timeline.njk"%}
 
