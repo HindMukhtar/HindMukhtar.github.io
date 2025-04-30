@@ -2,9 +2,9 @@
 title: "Programming"
 tags: skills
 images:
-  - src: "/images/python.png"
+  - src: "https://hindmukhtar.github.io/images/python.png"
     alt: "Python"
-  - src: "/images/sqllogo.png"
+  - src: "https://hindmukhtar.github.io/images/sqllogo.png"
     alt: "SQL"
 ---
 

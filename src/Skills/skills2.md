@@ -2,11 +2,11 @@
 title: "Data Visualization"
 tags: skills
 images:
-  - src: "/images/powerBI.png"
-    alt: "Python"
+  - src: "https://hindmukhtar.github.io/images/powerBI.png"
+    alt: "BI"
     scale: 2
-  - src: "/images/plotlyDash.png"
-    alt: "SQL"
+  - src: "https://hindmukhtar.github.io/images/plotlyDash.png"
+    alt: "dash"
     scale: 2
 ---
 

@@ -2,11 +2,11 @@
 title: "AI/ML"
 tags: skills
 images:
-  - src: "/images/tensorflow.png"
-    alt: "SQL"
+  - src: "https://hindmukhtar.github.io/images/tensorflow.png"
+    alt: "tf"
     scale: 0.75
-  - src: "/images/Pytorch_logo.png"
-    alt: "Python"
+  - src: "https://hindmukhtar.github.io/images/Pytorch_logo.png"
+    alt: "pytorch"
     scale: 1.5
 ---
 

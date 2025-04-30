@@ -2,11 +2,11 @@
 title: "Cloud Services"
 tags: skills
 images:
-  - src: "/images/awslogo.png"
-    alt: "Python"
+  - src: "https://hindmukhtar.github.io/images/awslogo.png"
+    alt: "aws"
     scale: 1
-  - src: "/images/azurelogo.png"
-    alt: "SQL"
+  - src: "https://hindmukhtar.github.io/images/azurelogo.png"
+    alt: "azure"
     scale: 2
 ---
 
