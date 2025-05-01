@@ -6,12 +6,7 @@
 
   {% if skills and skills.length == 4 %}
     <section class="skills-grid" style="padding: 2rem 0;">
-      <div style="
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, auto);
-        gap: 2rem;
-      ">
+      <div class="skills-grid-inner">
         {% for item in skills %}
           <div style="
             border: 1px solid #ddd;

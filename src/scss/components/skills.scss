@@ -1,0 +1,10 @@
+.skills-grid-inner {
+    display: grid;
+    grid-template-columns: 1fr; // Mobile default: 1 column
+    gap: 1.5rem;
+  
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr); // Desktop: 2 columns
+    }
+  }
+  
