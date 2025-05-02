@@ -6,16 +6,10 @@
 
   {% if skills and skills.length == 4 %}
     <section class="skills-grid" style="padding: 2rem 0;">
-      <!-- ✅ Removed all inline grid styles and replaced with a class -->
+      <!-- ✅ Only a class, no inline grid -->
       <div class="skills-grid-inner">
         {% for item in skills %}
-          <div style="
-            border: 1px solid #ddd;
-            border-radius: 0rem;
-            padding: 1rem 5rem;
-            background: #ffffff;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.06);
-          ">
+          <div class="skill-card">
             <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">
               {{ item.data.title }}
             </h3>
@@ -26,12 +20,12 @@
               align-items: flex-start;
               gap: 0rem;
             ">
-              <!-- Left: text content from markdown -->
+              <!-- Left: text content -->
               <div style="min-width: 0;">
                 {{ item.templateContent | safe }}
               </div>
 
-              <!-- Right: image stack from front matter -->
+              <!-- Right: images -->
               {% if item.data.images %}
                 <div style="
                   display: flex;
