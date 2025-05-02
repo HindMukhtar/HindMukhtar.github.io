@@ -9,7 +9,7 @@ images:
 ---
 
 - Python
-- SQl
+- SQL
 - C/C++ (Familiar) 
 
 

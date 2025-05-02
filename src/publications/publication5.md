@@ -1,6 +1,6 @@
 ---
 title: "SkyNetPredictor: Network Performance Prediction in Avionic Communication using AI" 
-date: 2025-02-01
+date: 2025-07-02
 conference: "IEEE Symposium on Computers and Communications (ISCC)"
 authors: "Hind Mukhtar, Raymound Schaub, Melike Erol-Kantarci"
 tags: publications
