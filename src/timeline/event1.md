@@ -4,11 +4,18 @@ date: 2023-01-01
 tags: timeline
 ---
 I transitioned from hardware engineering to data science by accepting a Data Scientist position at Satcom Direct. This role enabled me to apply my AI/ML expertise while drawing on my industry experience. In this role, I: 
-- Led full-cycle data science projects, setting objectives, defining timelines, and delivering actionable insights
-- Led AI initiatives, introducing machine learning models that optimized aviation network performance and enhanced predictive analytics for business-critical decision-making.
-- Mentored junior data scientists, providing guidance on best practices, model development, and cloud infrastructure, fostering a data-driven culture within the team.
-- Designed and deployed real-time monitoring pipelines for live metrics, improving anomaly detection and proactive issue resolution.
-- Architected cloud-based solutions on Azure, utilizing Azure Functions, Durable Functions, and Blob Storage Containers to scale predictive modeling workflows.
-- Integrated Prefect for orchestration, improving model deployment efficiency. Used Prefect to automate workflows, build pipelines between different interfaces, and schedule automated emails, dashboards, and reports.
-- Developed automated reporting dashboards to provide actionable insights to business stakeholders, integrating data from multiple sources.
-- Partnered with engineering teams to productionize AI models, ensuring scalability, robustness, and compliance with industry standards.
+- Designed and deployed predictive ML models for satellite communication systems, including:
+    - Sequence-to-sequence transformer forecasting network performance along flight paths
+    - Signal-to-noise ratio (SNR) prediction model leveraging aircraft location and satellite coverage
+- Applied large language models (LLMs) to parse and process aircraft communication text logs, integrating
+unstructured data into predictive modeling workflows
+- Led company-wide AI initiatives, introducing ML solutions to optimize network performance and developing an
+internal AI/ML library to accelerate experimentation and training
+- Performed statistical analyses quantifying the impact of demand growth on satellite networks to support
+provider capacity planning
+- Architected real-time monitoring pipelines on Azure (Functions, Durable Functions, Blob Storage) enabling live
+metric tracking, anomaly detection, and proactive issue resolution
+- Integrated Prefect for orchestration, automating workflows, deployments, and pipelines across departments
+- Automated reporting pipelines (performance dashboards, usage reports, TAM analysis) to support data-driven
+decision-making across sales and leadership
+Hardware Engineer, Satcom Direct – Ottawa, Ontario
