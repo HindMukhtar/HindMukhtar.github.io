@@ -1,6 +1,6 @@
 ---
 title: "QoS Prediction for Satellite-Based Avionic Communication Using Transformers" 
-date: 2026-01-013
+date: 2026-01-13
 conference: "IEEE Transactions on Machine Learning and Communications"
 authors: "Hind Mukhtar, Raymound Schaub, Melike Erol-Kantarci"
 tags: publications

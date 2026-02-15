@@ -8,8 +8,8 @@
 
 
 {# Community list content #}
-{% set communituListHeading = "Commmunity Outreach & Events" %}
-{% set communityListItems = collections.communityFeed %}
+{% set postListHeading = "Community Outreach & Events" %}
+{% set communityListItems = collections.community %}
 
 {% block content %}
   <main id="main-content" tabindex="-1">
@@ -18,4 +18,3 @@
     {% include "partials/components/community.njk" %}
   </main>
 {% endblock %}
-
