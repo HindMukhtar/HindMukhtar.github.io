@@ -5,6 +5,6 @@ location: "Edmonton, Alberta"
 tags: community
 ---
 ![](https://hindmukhtar.github.io/images/DLRL2025.jpeg)
-I attended the Deep Learning and Reinforcement Learning Summer School (DLRLSS) 2025, hosted by Amii (Alberta Machine Intelligence Institute) in Edmonton, Alberta.
+I attended the Deep Learning and Reinforcement Learning Summer School (DLRL) 2025, hosted by Amii (Alberta Machine Intelligence Institute) in Edmonton, Alberta. As a recipient of the CIFAR Inclusive AI Scholarship, I was selected to participate in this highly competitive two-week program.
 
 This two-week program brought together leading researchers and practitioners from academia and industry, covering advanced topics in deep learning, reinforcement learning, and AI systems. It was an incredible opportunity to learn from world experts, engage with cutting-edge research, and connect with an international community of AI researchers and engineers.

@@ -4,11 +4,21 @@ layout: 'layouts/page.njk'
 ---
 ![](/images/IMG_2437.jpg)
 
+Hi, I’m Hind, an engineer, data scientist and applied AI researcher. 
 
-Hi, I'm Hind! a passionate data scientist with a focus on AI-enabled wireless communications. I'm currently in the final year of my PhD, where my research explores the intersection of AI, communication systems, and the aviation industry. Specifically, I’m working on optimizing avionic communication networks with machine learning techniques like reinforcement learning, generative AI, and deep neural networks.
+Unlike many who enter AI through computer science, my path began in electrical engineering. I started my career designing satellite communication systems for aviation.
 
-I’m originally from Toronto, but I moved to Ottawa in 2019 for work and graduate studies and have been calling this city home ever since. When I’m not buried in data or fine-tuning algorithms, you’ll find me enjoying life outside of work. I love to travel and explore new places, and recently, I’ve taken up cycling, discovering the beautiful trails of Ottawa. I’m also a big fan of staying active, and working out is a big part of my routine.
+Working at the intersection of physical systems, reliability, and performance sparked my curiosity about how intelligence could be layered onto infrastructure. That curiosity led me back to graduate school, where I completed a Master’s in Electrical and Computer Engineering and ultimately transitioned into data science.
 
-In addition to my research, I’m passionate about connecting with like-minded folks at events hosted by my local Google Developers and Women Techmakers groups. I’m a strong believer in the power of community, which is why I’m constantly learning and sharing knowledge to help build AI expertise within my company and beyond.
+Today, I’m in the final year of my PhD, focused on AI-enabled communication systems. My research explores how machine learning,  particularly reinforcement learning and deep learning, can optimize network performance in dynamic, real-world environments. I’m especially interested in building AI systems that are not just theoretically elegant, but operationally robust.
 
-Feel free to explore my work, and let’s connect if you’re passionate about AI, data science, or just want to talk tech!
+Alongside my doctoral work, I’ve spent over seven years in industry, evolving from hardware engineering into leading applied AI initiatives. That transition continues to shape how I approach problems, grounded in engineering fundamentals, informed by data, and focused on practical impact.
+
+Outside of research, I’m happiest exploring new places. I love to travel, stay active, and recently picked up cycling. Fitness is a core part of my routine, and I value the discipline and mental clarity it brings.
+
+I’m also deeply committed to community. I actively engage in the broader technology ecosystem through the Google Developer Group, where I attend and volunteer at community events. I also share my work through academic publications, conference presentations and personal blog posts. I am motivated not only by building AI systems, but by influencing how technology is understood and applied. For me, impact extends beyond deployment, it includes knowledge-sharing and mentorship.
+
+If you’re interested in AI, applied machine learning, or the intersection of research and real-world systems, I’d love to connect!
+
+- LinkedIn: [linkedin.com/in/hind-mukhtar](https://www.linkedin.com/in/hind-mukhtar/)
+- Email: [hind.mukhtar@gmail.com](mailto:hind.mukhtar@gmail.com)

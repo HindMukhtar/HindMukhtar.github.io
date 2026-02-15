@@ -7,7 +7,7 @@ metaDesc: ''
 socialImage: ''
 ---
 
-I'm **Hind Mukhtar**, a data scientist, AI researcher and electrical engineer with a passion for applying AI and ML to real-world challenges. My career began in hardware engineering, designing satellite-based communication systems for business aviation. Driven by my interest in AI, I transitioned into research, pursuing a Master’s and now a PhD in electrical and computer engineering. My work focuses on optimizing in-flight connectivity using advanced AI/ML techniques. I’m passionate about bridging the gap between research and industry, leveraging AI to drive innovation.
+I’m **Hind Mukhtar**, an engineer, data scientist, and applied AI researcher, focused on applying machine learning to complex, real-world systems. With a background in engineering and advanced research in AI, I design intelligent solutions that operate reliably in dynamic environments. I’m passionate about translating research into practice and building AI systems that create measurable impact.
 
 <div style="text-align: center;">
 

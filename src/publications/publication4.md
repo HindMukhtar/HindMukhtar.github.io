@@ -1,20 +1,9 @@
 ---
 title: "QoS Prediction for Satellite-Based Avionic Communication Using Transformers" 
-date: 2025-03-01
-conference: "IEEE Transactions on Machine Learning and Communications - under review"
+date: 2026-01-013
+conference: "IEEE Transactions on Machine Learning and Communications"
 authors: "Hind Mukhtar, Raymound Schaub, Melike Erol-Kantarci"
 tags: publications
-url: 
+url: "https://ieeexplore.ieee.org/abstract/document/11348973"
 ---
-Satellite-based communication systems are crucial for providing high-speed data services in
-aviation, particularly for business aviation operations that demand global connectivity. These systems face
-challenges from numerous interdependent factors, such as satellite handovers, congestion, flight maneuvers,
-and seasonal variations, making accurate network performance prediction complex. Currently, there is no
-established methodology for predicting network performance in avionic communication systems. This paper
-addresses this gap by proposing machine learning-based approaches for pre-flight network performance
-prediction. Specifically, we leverage transformer models to predict quality of service (QoS) along a given
-flight path using real-world data. The model takes as input a variety of positional and network-related
-features, such as aircraft location, satellite information, historical network performance, and handover
-probabilities, and outputs a predicted performance score for each position along the flight. This approach
-allows for proactive decision-making, enabling flight crews to select the most optimal flight paths before
-departure, improving overall operational efficiency in business aviation.
+Satellite-based communication systems are crucial for providing high-speed data services in aviation, particularly for business aviation operations that demand global connectivity. These systems face challenges from numerous interdependent factors, such as satellite handovers, congestion, flight maneuvers, and seasonal variations, making accurate Quality of Service (QoS) prediction complex. Currently, there is no established methodology for predicting QoS in avionic communication systems. This paper addresses this gap by proposing machine learning-based approaches for pre-flight QoS prediction. Specifically, we leverage transformer models to predict QoS along a given flight path using real-world data. The model takes as input a variety of positional and network-related features, such as aircraft location, satellite information, historical QoS, and handover probabilities, and outputs a predicted performance score for each position along the flight. This approach allows for proactive decision-making, enabling flight crews to select the most optimal flight paths before departure, improving overall operational efficiency in business aviation. Our proposed encoder-decoder transformer model achieved an overall prediction accuracy of 65% and an RMSE of 1.91, representing a significant improvement over traditional baseline methods. While these metrics are notable, our model’s key contribution is a substantial improvement in prediction accuracy for underrepresented classes, which were a major limitation of prior approaches. Additionally, the model significantly reduces inference time, achieving predictions in 40 seconds compared to 6,353 seconds for a traditional KNN model. This approach allows for proactive decision-making, enabling flight crews to select optimal flight paths before departure, improving overall operational efficiency in business aviation.
