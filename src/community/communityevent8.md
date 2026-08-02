@@ -1,6 +1,6 @@
 ---
 title: "Invited Speaker IEEE Women in Communications Engineering (WICE) Panel" 
-date: 2026-03-25
+date: 2026-07-09
 location: "Ottawa, Ontario"
 tags: community
 ---
