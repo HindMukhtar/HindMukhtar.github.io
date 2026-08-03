@@ -7,15 +7,14 @@ I transitioned from hardware engineering to data science by accepting a Data Sci
 - Designed and deployed predictive ML models for satellite communication systems, including:
     - Sequence-to-sequence transformer forecasting network performance along flight paths
     - Signal-to-noise ratio (SNR) prediction model leveraging aircraft location and satellite coverage
-- Applied large language models (LLMs) to parse and process aircraft communication text logs, integrating
-unstructured data into predictive modeling workflows
-- Led company-wide AI initiatives, introducing ML solutions to optimize network performance and developing an
-internal AI/ML library to accelerate experimentation and training
-- Performed statistical analyses quantifying the impact of demand growth on satellite networks to support
+- Built multi-variable forecasting models incorporating historical demand, projected growth, and allocation
+constraints to inform global satellite bandwidth allocation and provider contract strategy
+- Led real-time monitoring architecture for LEO, LTE and 5G product launches, engineering spatial-temporal
+pipelines across satellite telemetry and geolocation data to power proactive fault detection
+- Performed statistical analysis quantifying the impact of demand growth on satellite networks to support
 provider capacity planning
-- Architected real-time monitoring pipelines on Azure (Functions, Durable Functions, Blob Storage) enabling live
-metric tracking, anomaly detection, and proactive issue resolution
+- Built SQL queries, reporting pipelines, and dashboards to support engineering and product decision-making
+using PowerBI, Tableau and Python.
 - Integrated Prefect for orchestration, automating workflows, deployments, and pipelines across departments
-- Automated reporting pipelines (performance dashboards, usage reports, TAM analysis) to support data-driven
-decision-making across sales and leadership
-Hardware Engineer, Satcom Direct – Ottawa, Ontario
+
+
