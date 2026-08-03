@@ -7,7 +7,11 @@ metaDesc: ''
 socialImage: ''
 ---
 
-I’m **Hind Mukhtar**, an engineer, data scientist, and applied AI researcher, focused on applying machine learning to complex, real-world systems. With a background in engineering and advanced research in AI, I design intelligent solutions that operate reliably in dynamic environments. I’m passionate about translating research into practice and building AI systems that create measurable impact.
+<div style="text-align: center;">
+
+I'm **Hind Mukhtar**, an engineer, data scientist, and applied AI researcher, focused on applying machine learning to complex, real-world systems. With a background in engineering and advanced research in AI, I design intelligent solutions that operate reliably in dynamic environments. I'm passionate about translating research into practice and building AI systems that create measurable impact.
+
+</div>
 
 <div style="text-align: center;">
 
