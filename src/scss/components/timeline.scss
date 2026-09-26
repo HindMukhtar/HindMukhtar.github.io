@@ -1,99 +1,49 @@
-/* Overall Timeline Styles */
+.career { padding-top: 2rem; padding-bottom: 2rem; }
+.career__heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1.5rem; }
+.career__controls { display: flex; gap: .5rem; }
+.career__controls button {
+  width: 2.5rem; height: 2.5rem; border: 1px solid var(--color-stroke);
+  border-radius: 50%; background: transparent; color: var(--color-text); cursor: pointer; font: inherit;
+  &:hover { border-color: var(--color-theme-primary); }
+  &:disabled { opacity: .3; cursor: default; }
+}
+.no-js .career__controls { display: none; }
 .timeline {
-    position: relative;
-    padding-left: 60px; /* Added padding for better spacing */
-    margin-top: 30px;
-  }
-  
-  /* Add vertical line */
-  .timeline:before {
-    content: '';
-    position: absolute;
-    left: 68px; /* Adjust to place the line at the center of the dots */
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background-color: #000000; /* Line color */
-  }
-  
-  /* Timeline Item */
-  .timeline-item {
-    margin-bottom: 20px;
-    position: relative;
-    padding-left: 30px;
-  }
-  
-  .timeline-item-header {
-    display: flex;
-    align-items: center;
-    padding: 0px 0;
-  }
-  
-  .timeline-header-content {
-    display: flex;
-    align-items: center;
-    gap: 0px; /* Space between arrow, dot, and date */
-  }
-  /* Timeline Dot */
-  .timeline-dot {
-    position: absolute;
-    left: 0; /* Align the dot with the center of the line */
-    top: 0;
-    width: 20px;
-    height: 20px;
-    background-color: #000000;
-    border-radius: 50%;
-    z-index: 2; /* Ensure it stays on top of the line */
-  }
-  
-  /* Arrow Button */
-  .timeline-arrow {
-    position: absolute;
-    left: -25px; /* Adjust to place the arrow before the timeline line */
-    top: 5%;
-    transform: scale(2);
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    transition: transform 0.3s ease;
-  }
-  
-  /* Remove focus and active border */
-  .timeline-arrow:focus,
-  .timeline-arrow:active {
-    outline: none;  /* Removes the outline on focus */
-    border: none;   /* Ensures no border is visible */
-  }
-
-  /* Rotate arrow when expanded */
-  .timeline-arrow[aria-expanded="true"] svg {
-    transform: rotate(180deg);
-  }
-  
-  /* Timeline Item Body */
-  .timeline-item-body {
-    display: none;
-    padding: 15px; /* Added padding for better content spacing */
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    margin-top: 10px;
-  }
-  
-  /* Timeline Item Body visible when expanded */
-  .timeline-item-body[aria-hidden="false"] {
-    display: block;
-  }
-  
-  /* Timeline Date & Title */
-  .timeline-meta {
-    display: flex;
-    flex-direction: column; /* Stacks date above title */
-    line-height: 1.4;
-  }
-  
-  /* Rotate Arrow on Expand */
-  .timeline-arrow[aria-expanded="true"] + .timeline-item-body {
-    display: block;
-  }
-  
+  display: grid; grid-auto-flow: column; grid-auto-columns: minmax(260px, 24%);
+  overflow-x: auto; align-items: stretch; padding: .5rem 0 1.25rem;
+  scrollbar-width: thin; scrollbar-color: #305671 #07111c;
+  scroll-snap-type: x proximity;
+}
+.timeline-item { position: relative; padding: 1.25rem .75rem 0 0; scroll-snap-align: start; min-width: 0; }
+.timeline-item::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: #305671; }
+.timeline-dot { position: absolute; width: 7px; height: 7px; border-radius: 50%; background: #80b7d9; left: 1.25rem; top: -3px; box-shadow: 0 0 12px #80b7d933; }
+.timeline-card { height: 100%; border: 1px solid var(--color-stroke); border-radius: 5px; background: var(--color-bg-glare); }
+.timeline-card summary { position: relative; cursor: pointer; padding: 1.25rem 2.5rem 2rem 1.25rem; min-height: 18rem; list-style: none; }
+.timeline-card summary::-webkit-details-marker { display: none; }
+.timeline-card:hover, .timeline-card[open] { border-color: #41677c; }
+.timeline-date { display: block; color: var(--muted); font-size: .75rem; margin-bottom: 1rem; }
+.timeline-title { display: block; font-size: .95rem; line-height: 1.6; font-weight: 500; }
+.timeline-logo-slot { display: flex; align-items: center; height: 65px; margin-bottom: .75rem; }
+.timeline-logo { display: block; width: 58px; max-width: 100%; height: 36px; object-fit: contain; object-position: left center; border-radius: 3px; }
+.timeline-logo[src$="/peo-logo-transparent.png"] {
+  width: 164px;
+  height: 65px;
+  padding: 8px;
+  background: transparent;
+  filter: brightness(0) invert(1);
+}
+.timeline-logo[src$="/honeywell-logo-transparent.png"] { width: 116px; height: 40px; }
+.timeline-logo[src$="/queens-logo-transparent.png"] { width: 88px; height: 44px; }
+.timeline-logo[src$="/uottawa-logo-transparent.png"] { filter: grayscale(1) invert(1); }
+.timeline-arrow { position: absolute; right: 1rem; bottom: 1rem; color: var(--color-theme-primary); }
+.timeline-card[open] .timeline-arrow { transform: rotate(90deg); }
+.timeline-item-body { padding: 0 1.25rem 1.25rem; font-size: .8rem; line-height: 1.8; color: var(--muted); overflow-wrap: anywhere; }
+.timeline-item-body ul { padding-left: 1rem; }
+.timeline-item-body p, .timeline-item-body li { margin-bottom: .75rem; }
+@media (max-width: 767px) {
+  .career__controls { display: none; }
+  .timeline { display: block; overflow: visible; padding-left: 1rem; }
+  .timeline-item { padding: 0 0 1rem 1.5rem; }
+  .timeline-item::before { left: 0; width: 1px; height: auto; bottom: 0; }
+  .timeline-dot { left: -3px; top: 1.5rem; }
+}

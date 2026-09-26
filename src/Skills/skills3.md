@@ -10,8 +10,8 @@ images:
     scale: 2
 ---
 
-- AWS
-- Azure
+- AWS (Athena, Redshift, S3, EC2)
+- Azure (Functions, Blob storage)
 
 
 

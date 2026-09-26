@@ -5,7 +5,16 @@
       <ol class="[ community-list__items ] [ sf-flow pad-top-300 ]" reversed>
         {% for item in communityListItems %}
           {% if item.date.getTime() <= global.now %}
+            {% set card = item.templateContent | communityCard %}
             <li class="community-list__item">
+              {% if card.photo %}
+                <a class="community-card__media" href="{{ card.photo.src }}" aria-label="View full photo: {{ item.data.title }}">
+                  <img src="{{ card.photo.src }}" alt="{{ card.photo.alt }}" loading="lazy" decoding="async">
+                </a>
+              {% else %}
+                <div class="community-card__media community-card__media--empty" aria-hidden="true"></div>
+              {% endif %}
+              <div class="community-card__content">
               <h3 class="font-base leading-tight text-600 weight-mid">
                 {{ item.data.title }}
               </h3>
@@ -17,8 +26,9 @@
                   📍 {{ item.data.location }}
                 </p>
               {% endif %}
-              <div class="text-500 gap-top-300">
-                {{ item.templateContent | safe }}
+              <div class="community-card__body text-500 gap-top-300">
+                {{ card.body | safe }}
+              </div>
               </div>
             </li>
           {% endif %}
@@ -26,4 +36,38 @@
       </ol>
     </div>
   </section>
+  <dialog class="community-photo-viewer" aria-label="Full event photo">
+    <form method="dialog">
+      <button type="submit" autofocus>Close ×</button>
+    </form>
+    <img alt="">
+  </dialog>
+  <script>
+    (() => {
+      const viewer = document.querySelector('.community-photo-viewer');
+      if (!viewer || typeof viewer.showModal !== 'function') return;
+      const image = viewer.querySelector('img');
+      let opener;
+      document.querySelectorAll('a.community-card__media').forEach(link => {
+        link.setAttribute('aria-haspopup', 'dialog');
+        link.addEventListener('click', event => {
+          if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+          event.preventDefault();
+          opener = link;
+          image.src = link.href;
+          image.alt = link.querySelector('img').alt || link.closest('.community-list__item').querySelector('h3').textContent.trim();
+          viewer.showModal();
+          document.documentElement.classList.add('photo-viewer-open');
+        });
+      });
+      viewer.addEventListener('click', event => {
+        if (event.target === viewer) viewer.close();
+      });
+      viewer.addEventListener('close', () => {
+        document.documentElement.classList.remove('photo-viewer-open');
+        image.removeAttribute('src');
+        if (opener) opener.focus({preventScroll: true});
+      });
+    })();
+  </script>
 {% endif %}
