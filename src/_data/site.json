@@ -1,14 +1,14 @@
 {
   "showThemeCredit": false,
-  "name": "Hind Mukhtar, M.ASc., P.Eng",
-  "shortDesc": "Hind Mukhtar - Data Scientist | AI Researcher | Engineer",
+  "name": "Hind Mukhtar, P.Eng",
+  "shortDesc": "Hind Mukhtar - Machine Learning Engineer | Applied AI Researcher | Wireless Systems",
   "url": "https://hindmukhtar.github.io",
   "authorEmail": "hind.mukhtar@gmail.com",
   "authorHandle": "",
   "authorName": "Hind Mukhtar",
   "enableThirdPartyComments": false,
   "maxPostsPerPage": 5,
-  "maxPublicationsPerPage": 5, 
+  "maxPublicationsPerPage": 6,
   "maxBlogsPerPage": 5, 
   "paymentPointer": "",
   "faviconPath": "/images/favicon.png"

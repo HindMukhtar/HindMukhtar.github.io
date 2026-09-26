@@ -10,9 +10,8 @@ images:
     scale: 1.5
 ---
 
-- Pytorch 
-- Tensorflow 
-- Deep Learning
-- Reinforcement Learning
+- Pytorch, Tensorflow
+- Deep Learning, Reinforcement Learning
+- LLMs, RAG, Prompt Engineering, Agent Orchestration
 
 

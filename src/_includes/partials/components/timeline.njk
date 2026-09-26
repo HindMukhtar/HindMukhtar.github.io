@@ -1,61 +1,50 @@
-<svg display="none">
-  <symbol id="arrow">
-    <!-- Arrow initially pointing left -->
-    <polyline points="10 7, 15 12, 10 17" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-  </symbol>
-</svg>
-
-<div class="[ inner-wrapper ] [ sf-flow ]">
-  <!-- Heading with same padding as the timeline -->
-  <h2 class="[ pad-top-700 gap-bottom-900 ]">Career Journey</h2>
-
-  <div class="[ timeline ] [ pad-top-700 gap-bottom-900 ]">
+<section class="inner-wrapper career" aria-labelledby="career-heading">
+  <div class="career__heading">
+    <h2 id="career-heading">Career Journey</h2>
+    <div class="career__controls">
+      <button type="button" data-timeline-direction="-1" aria-label="Scroll career journey left" aria-controls="career-timeline">←</button>
+      <button type="button" data-timeline-direction="1" aria-label="Scroll career journey right" aria-controls="career-timeline">→</button>
+    </div>
+  </div>
+  <div class="timeline" id="career-timeline" tabindex="0" role="region" aria-label="Career journey entries">
     {% for item in timelineItems %}
       <div class="timeline-item">
-        <div class="timeline-item-header">
-          <!-- Collapsible Arrow Button -->
-          <button class="timeline-arrow" type="button" id="item{{ loop.index }}" aria-expanded="false" aria-controls="item{{ loop.index }}-body" aria-haspopup="true" data-item="{{ loop.index }}">
-            <svg class="timeline-arrow-icon" viewBox="0 0 24 24" width="24px" height="24px" style="transform: rotate(0deg); transition: transform 0.3s ease;">
-              <use href="#arrow" />
-            </svg>
-          </button>
-
-          <span class="timeline-dot"></span>
-          <span id="item{{ loop.index }}-name" class="timeline-meta">
-            <time class="timeline-date" datetime="{{ item.date | myDateFilter }}">{{ item.date | myDateFilterds }}</time><br>
+        <span class="timeline-dot" aria-hidden="true"></span>
+        <details class="timeline-card">
+          <summary>
+            <time class="timeline-date" datetime="{{ item.date | w3DateFilter }}">{{ item.date | myDateFilterds }}</time>
+            <span class="timeline-logo-slot">
+              {% if item.data.logo %}
+                <img class="timeline-logo" src="{{ item.data.logo }}" alt="" width="58" height="36" loading="lazy">
+              {% endif %}
+            </span>
             <strong class="timeline-title">{{ item.data.title }}</strong>
-          </span>
-        </div>
-
-        <div class="timeline-item-body" id="item{{ loop.index }}-body" role="region" aria-labelledby="item{{ loop.index }}" aria-hidden="true">
-          <div class="timeline-item-body-content">
-            {{ item.data.content | safe }}
+            <span class="timeline-arrow" aria-hidden="true">↗</span>
+          </summary>
+          <div class="timeline-item-body">
+            {{ item.templateContent | safe }}
           </div>
-        </div>
+        </details>
       </div>
     {% endfor %}
   </div>
-</div>
-
+</section>
 <script>
-  // JavaScript to handle collapsing behavior
-  document.addEventListener('DOMContentLoaded', function() {
-    const timelineArrows = document.querySelectorAll('.timeline-arrow');
-    
-    timelineArrows.forEach(arrow => {
-      arrow.addEventListener('click', function() {
-        const itemIndex = this.getAttribute('data-item');
-        const itemBody = document.getElementById(`item${itemIndex}-body`);
-        const isExpanded = this.getAttribute('aria-expanded') === 'true';
-
-        // Toggle visibility of the item body and update aria-expanded
-        itemBody.setAttribute('aria-hidden', isExpanded);
-        this.setAttribute('aria-expanded', !isExpanded);
-        
-        // Rotate the arrow (0deg = left, 90deg = down)
-        const arrowIcon = this.querySelector('.timeline-arrow-icon');
-        arrowIcon.style.transform = isExpanded ? 'rotate(0deg)' : 'rotate(90deg)';
+  (() => {
+    const timeline = document.getElementById('career-timeline');
+    const buttons = document.querySelectorAll('[data-timeline-direction]');
+    const updateControls = () => {
+      buttons[0].disabled = timeline.scrollLeft <= 1;
+      buttons[1].disabled = timeline.scrollLeft + timeline.clientWidth >= timeline.scrollWidth - 1;
+    };
+    buttons.forEach(button => button.addEventListener('click', () => {
+      timeline.scrollBy({
+        left: Number(button.dataset.timelineDirection) * timeline.clientWidth * 0.8,
+        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
       });
-    });
-  });
+    }));
+    timeline.addEventListener('scroll', updateControls, { passive: true });
+    window.addEventListener('resize', updateControls);
+    updateControls();
+  })();
 </script>

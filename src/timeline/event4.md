@@ -1,10 +1,8 @@
 ---
 title: "Internship at Hydro One"
 date: 2016-05-01
-url: "/timeline/event-2"
+url: "/timeline/event-4"
 tags: timeline
+logo: /images/hydroone-transparent.png
 ---
-Completed a 4 month long internship where I: 
-- Designed the electrical arrangement for a strict-deadline emergency replacement of potential transformers at a high voltage transmission station, preventing the transformers from going out of service 
-- Demonstrated knowledge of CAD simulation tools and circuit analysis by performing an arc flash study to determine the level of personal protective equipment necessary at the transmission station
-- Researched, analyzed data and provided feedback for continuous Improvement initiatives (Design and drawings quality, Asset registry timeliness, Asset registry accuracy) which aided in the investigation of systemic issues 
+My first internship was a four-month placement in the power industry, at Hydro One, where I gained early exposure to electrical infrastructure and high-voltage transmission systems. I helped design the electrical arrangement for the urgent replacement of potential transformers at a transmission station, contributing to a solution that prevented them from being taken out of service. I also performed an arc-flash study using CAD simulation and circuit-analysis tools and supported continuous-improvement initiatives through research and data analysis.

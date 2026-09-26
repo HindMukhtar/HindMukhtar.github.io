@@ -23,6 +23,7 @@ module.exports = function(config) {
   config.addFilter('w3DateFilter', w3DateFilter);
   config.addFilter('myDateFilter', myDateFilter);
   config.addFilter('myDateFilterds', myDateFilterds);
+  config.addFilter('communityCard', require('./src/filters/community-card-filter'));
 
   // Layout aliases
   config.addLayoutAlias('home', 'layouts/home.njk');

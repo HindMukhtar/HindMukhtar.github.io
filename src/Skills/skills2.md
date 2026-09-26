@@ -13,4 +13,6 @@ images:
 - Power BI
 - Tableau
 - Plotly/Dash  
+- Text-to-SQL
+- Self-serve analytics
 
