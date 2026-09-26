@@ -1,21 +1,18 @@
 <!DOCTYPE html>
-<html><head></head><body><svg display="none"><symbol id="arrow"><polyline points="10 7, 15 12, 10 17" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline></symbol></svg><div class="[ inner-wrapper ] [ sf-flow ]"><h2 class="[ pad-top-700 gap-bottom-900 ]">Career Journey</h2><div class="[ timeline ] [ pad-top-700 gap-bottom-900 ]"></div></div><script>// JavaScript to handle collapsing behavior
-  document.addEventListener('DOMContentLoaded', function() {
-    const timelineArrows = document.querySelectorAll('.timeline-arrow');
-    
-    timelineArrows.forEach(arrow => {
-      arrow.addEventListener('click', function() {
-        const itemIndex = this.getAttribute('data-item');
-        const itemBody = document.getElementById(`item${itemIndex}-body`);
-        const isExpanded = this.getAttribute('aria-expanded') === 'true';
-
-        // Toggle visibility of the item body and update aria-expanded
-        itemBody.setAttribute('aria-hidden', isExpanded);
-        this.setAttribute('aria-expanded', !isExpanded);
-        
-        // Rotate the arrow (0deg = left, 90deg = down)
-        const arrowIcon = this.querySelector('.timeline-arrow-icon');
-        arrowIcon.style.transform = isExpanded ? 'rotate(0deg)' : 'rotate(90deg)';
+<html><head></head><body><section class="inner-wrapper career" aria-labelledby="career-heading"><div class="career__heading"><h2 id="career-heading">Career Journey</h2><div class="career__controls"><button type="button" data-timeline-direction="-1" aria-label="Scroll career journey left" aria-controls="career-timeline">←</button> <button type="button" data-timeline-direction="1" aria-label="Scroll career journey right" aria-controls="career-timeline">→</button></div></div><div class="timeline" id="career-timeline" tabindex="0" role="region" aria-label="Career journey entries"></div></section><script>(() => {
+    const timeline = document.getElementById('career-timeline');
+    const buttons = document.querySelectorAll('[data-timeline-direction]');
+    const updateControls = () => {
+      buttons[0].disabled = timeline.scrollLeft <= 1;
+      buttons[1].disabled = timeline.scrollLeft + timeline.clientWidth >= timeline.scrollWidth - 1;
+    };
+    buttons.forEach(button => button.addEventListener('click', () => {
+      timeline.scrollBy({
+        left: Number(button.dataset.timelineDirection) * timeline.clientWidth * 0.8,
+        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
       });
-    });
-  });</script></body></html>
+    }));
+    timeline.addEventListener('scroll', updateControls, { passive: true });
+    window.addEventListener('resize', updateControls);
+    updateControls();
+  })();</script></body></html>
