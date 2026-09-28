@@ -1,7 +1,7 @@
 ---
 title: "Speaker at IEEE International Mediterranean Conference on Communications and Networking (Meditcom)" 
 date: 2026-07-09
-location: "Ottawa, Ontario"
+location: "Cagliari, Italy"
 tags: community
 ---
 ![](/images/meditcom-2026.jpg)
