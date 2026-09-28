@@ -11,5 +11,5 @@
   "maxPublicationsPerPage": 6,
   "maxBlogsPerPage": 5, 
   "paymentPointer": "",
-  "faviconPath": "/images/favicon.png"
+  "faviconPath": "/images/hm-favicon.png"
 }
