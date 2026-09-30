@@ -20,6 +20,20 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Cache RAG embedding model and vectors
+        uses: actions/cache@v4
+        with:
+          path: .cache/rag
+          key: rag-${{ runner.os }}-${{ hashFiles('src/js/rag/config.mjs', 'package-lock.json') }}-${{ github.sha }}
+          restore-keys: |
+            rag-${{ runner.os }}-${{ hashFiles('src/js/rag/config.mjs', 'package-lock.json') }}-
+
+      - name: Build RAG index and browser assets
+        run: npm run rag:build
+
+      - name: Check RAG retrieval
+        run: npm run test:rag
+
       - name: Build CSS
         run: npm run sass:process   # Ensure Sass compiles CSS
 

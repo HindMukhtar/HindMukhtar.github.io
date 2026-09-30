@@ -6,9 +6,8 @@ const getSize = require('image-size');
 
 module.exports = function(value, outputPath) {
   if (outputPath.endsWith('.html')) {
-    const DOM = new JSDOM(value, {
-      resources: 'usable'
-    });
+    // This transform only edits markup. Do not fetch images/iframes during builds.
+    const DOM = new JSDOM(value);
 
     const document = DOM.window.document;
     const articleImages = [...document.querySelectorAll('main article img, .intro img')];
@@ -82,7 +81,9 @@ module.exports = function(value, outputPath) {
       });
     }
 
-    return '<!DOCTYPE html>\r\n' + document.documentElement.outerHTML;
+    const result = '<!DOCTYPE html>\r\n' + document.documentElement.outerHTML;
+    DOM.window.close();
+    return result;
   }
   return value;
 };

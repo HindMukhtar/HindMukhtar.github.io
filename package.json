@@ -19,10 +19,14 @@
   },
   "devDependencies": {
     "@erquhart/rollup-plugin-node-builtins": "^2.1.5",
+    "@huggingface/transformers": "3.8.1",
+    "@mlc-ai/web-llm": "0.2.85",
     "bl": "^3.0.0",
     "chokidar-cli": "^2.1.0",
     "cross-env": "^5.2.1",
+    "esbuild": "0.25.12",
     "make-dir-cli": "^2.0.0",
+    "pdfjs-dist": "4.8.69",
     "prettier": "^1.19.1",
     "rollup": "^1.32.1",
     "rollup-plugin-commonjs": "^10.1.0",
@@ -36,7 +40,12 @@
     "cms:bundle": "rollup --config",
     "start": "concurrently \"npm run sass:process -- --watch\" \"npm run cms:bundle -- --watch\" \"chokidar \\\"src/_includes/**\\\" -c \\\"npm run cms:precompile\\\"\" \"npm run serve\"",
     "serve": "cross-env ELEVENTY_ENV=development npx eleventy --serve",
-    "production": "npm run sass:process && npm run cms:precompile && npm run cms:bundle && npx eleventy"
+    "production": "npm run rag:build && npm run sass:process && npm run cms:precompile && npm run cms:bundle && npx eleventy",
+    "rag:index": "node scripts/build-rag-index.mjs",
+    "rag:assets": "node scripts/build-rag-assets.mjs",
+    "rag:build": "npm run rag:index && npm run rag:assets",
+    "test:rag": "node --test tests/rag.test.mjs",
+    "prestart": "npm run rag:build"
   },
   "repository": {
     "type": "git",

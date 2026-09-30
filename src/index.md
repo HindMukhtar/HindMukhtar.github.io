@@ -28,6 +28,9 @@ I'm **Hind**, an engineer, data scientist, and applied AI researcher, focused on
   <li class="find-me__item" style="margin-bottom: 0.5rem;">
     <a href="/images/HindMukhtar-Resume.pdf" target="_blank" rel="noopener noreferrer" class="find-me__link">📄  Resume</a>
   </li>
+  <li class="find-me__item" style="margin-bottom: 0.5rem;">
+    <button type="button" class="find-me__link" data-ai-open aria-haspopup="dialog" aria-controls="ask-ai" hidden>Ask AI About Me</button>
+  </li>
 </ul>
 
 </div>

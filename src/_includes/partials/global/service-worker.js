@@ -41,7 +41,7 @@ self.addEventListener('activate', evt => {
     caches
       .keys()
       .then(cacheNames => {
-        return cacheNames.filter(item => !Object.values(CACHE_KEYS).includes(item));
+        return cacheNames.filter(item => /^(precache-|runtime-)/.test(item) && !Object.values(CACHE_KEYS).includes(item));
       })
       .then(itemsToDelete => {
         return Promise.all(
@@ -55,7 +55,8 @@ self.addEventListener('activate', evt => {
 });
 
 self.addEventListener('fetch', evt => {
-  const {hostname} = new URL(evt.request.url);
+  const {hostname, origin, pathname} = new URL(evt.request.url);
+  if (evt.request.method !== 'GET' || origin !== self.location.origin || pathname.startsWith('/rag/')) return;
 
   // Check we don't want to ignore this host
   if (IGNORED_HOSTS.indexOf(hostname) >= 0) {

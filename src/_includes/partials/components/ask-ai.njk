@@ -1,0 +1,31 @@
+<dialog class="ask-ai" id="ask-ai" aria-labelledby="ask-ai-title" aria-describedby="ask-ai-description">
+  <header class="ask-ai__header">
+    <h2 id="ask-ai-title">Ask AI About Me</h2>
+    <button type="button" data-ai-close aria-label="Close Ask AI About Me">×</button>
+  </header>
+  <div class="ask-ai__content">
+    <p id="ask-ai-description">Explore my experience, research, and community involvement with answers grounded in my documents.</p>
+    <div class="ask-ai__setup">
+      <p>The conversation runs privately in your browser. The first visit downloads about 300 MB plus a smaller search model; your browser may cache these files for future visits.</p>
+      <button type="button" data-ai-load hidden>Retry AI setup</button>
+      <button type="button" data-ai-stop hidden>Stop</button>
+    </div>
+    <p class="ask-ai__status" data-ai-status role="status" aria-live="polite">Loading sources…</p>
+    <div class="ask-ai__suggestions" aria-label="Suggested questions">
+      <button type="button" data-ai-question>What machine learning experience does Hind have?</button>
+      <button type="button" data-ai-question>What is Hind’s research about?</button>
+      <button type="button" data-ai-question>How is Hind involved in the community?</button>
+    </div>
+    <div class="ask-ai__messages" data-ai-messages role="log" aria-label="Conversation" aria-live="off"></div>
+    <form data-ai-form>
+      <label for="ai-question">Your question</label>
+      <textarea id="ai-question" name="question" rows="2" maxlength="800" placeholder="Ask about my work, research, or experience…" required></textarea>
+      <div class="ask-ai__actions">
+        <button type="submit" data-ai-submit disabled>Send</button>
+        <button type="button" data-ai-clear>Clear conversation</button>
+      </div>
+    </form>
+    <p class="ask-ai__note">AI answers can make mistakes. Check the linked sources. Chat history stays in this tab and is cleared when you reload.</p>
+  </div>
+</dialog>
+<script type="module" src="/rag/app/chat.js"></script>

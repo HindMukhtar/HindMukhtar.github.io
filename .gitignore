@@ -15,3 +15,7 @@ src/scss/_tokens.scss
 
 # Hide compiled CSS
 src/_includes/assets/*
+
+# Generated RAG assets and local model/vector caches
+src/rag/
+.cache/rag/

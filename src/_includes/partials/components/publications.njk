@@ -1,7 +1,7 @@
 {% if publicationListItems.length %}
   <section class="[ publication-list ] [ pad-top-700 gap-bottom-900 ]">
     <div class="[ inner-wrapper ] [ sf-flow ]">
-      <h2 class="[ publication-list__heading ] [ text-700 md:text-800 ]">{{ postListHeading }}</h2>
+      <h2 id="publications" class="[ publication-list__heading ] [ text-700 md:text-800 ]">{{ postListHeading }}</h2>
       <ol class="[ publication-list__items ] [ sf-flow ] [ pad-top-300 ]" reversed>
         {% for item in publicationListItems %}
           {% if item.date.getTime() <= global.now %}
